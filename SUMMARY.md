@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Slack-Gamebot](README.md)
+* [Privy API](README.md)
 

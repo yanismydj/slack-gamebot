@@ -1,4 +1,4 @@
-# Slack-Gamebot
+# Privy API
 
 [![Add to Slack](https://platform.slack-edge.com/img/add_to_slack@2x.png)](http://playplay.io)
 
