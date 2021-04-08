@@ -1,3 +1,5 @@
+# DEPLOYMENT
+
 ## Use a Service
 
 Before deploying, consider using and sponsoring [a free game bot service](http://playplay.io) and not worrying about installation or maintenance.
@@ -16,19 +18,19 @@ Deploy slack-gamebot to Heroku and add a MongoLab or Compose MongoDB provider. Y
 
 ### Environment
 
-#### SLACK_API_TOKEN
+#### SLACK\_API\_TOKEN
 
 If your bot servces one team, create a new bot integration on Slack and set `SLACK_API_TOKEN` from the bot integration settings on Slack. The first time you start the service it will automatically create a team using this token.
 
-```
+```text
 heroku config:add SLACK_API_TOKEN=...
 ```
 
-#### GAMEBOT_ALIASES
+#### GAMEBOT\_ALIASES
 
 Optional names for this bot.
 
-```
+```text
 heroku config:add GAMEBOT_ALIASES=":pong: pp"
 ```
 
@@ -40,15 +42,15 @@ game.aliases << 'pp'
 game.save!
 ```
 
-#### GIPHY_API_KEY
+#### GIPHY\_API\_KEY
 
 Slack-Gamebot replies with animated GIFs. While it's currently not necessary, uyou may need to set `GIPHY_API_KEY` in the future, see [github.com/Giphy/GiphyAPI](https://github.com/Giphy/GiphyAPI) for details.
 
 #### Multi-Game Setup
 
-If your bot is a service, like the one on [playplay.io](http://playplay.io), register an aplication with Slack on https://api.slack.com and note the Slack client ID and secret. Create a game (currently console only).
+If your bot is a service, like the one on [playplay.io](http://playplay.io), register an aplication with Slack on [https://api.slack.com](https://api.slack.com) and note the Slack client ID and secret. Create a game \(currently console only\).
 
-```
+```text
 heroku run script/console --app=...
 
 2.2.1> Game.create!(name: 'pong', client_id: 'slack client id', client_secret: 'slack client secret', botname: 'pongbot', aliases: ['pp', 'pong'])
@@ -60,3 +62,4 @@ This will allow you to create a team via `POST /teams?game=pong&code=`, where th
 #### Database Backups
 
 MongoLab and MongoHQ ensure a system-level backup. You might find it handy to backup the data elsewhere occasionally. If you can run `rake db:heroku:backup[app]` locally as long as you can execute `heroku config --app=...` as well. This creates a `.tar.gz` file from a MongoDB database configured on the Heroku `app` application.
+
