@@ -18,7 +18,7 @@ Run `SLACK_API_TOKEN=<your API token> GAMEBOT_SECRET=secret foreman start`
 
 ## Production Deployment
 
-See [DEPLOYMENT](deployment.md)
+See [DEPLOYMENT]()
 
 ## Usage
 
@@ -350,11 +350,11 @@ We recommend [HyperClient](https://github.com/codegram/hyperclient) to query the
 
 ## Contributing
 
-This bot is built with [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot). See [CONTRIBUTING](contributing.md).
+This bot is built with [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot). See [CONTRIBUTING]().
 
 ## Copyright and License
 
-Copyright \(c\) 2015, Daniel Doubrovkine, Artsy and [Contributors](changelog.md).
+Copyright \(c\) 2015, Daniel Doubrovkine, Artsy and [Contributors]().
 
-This project is licensed under the [MIT License](license.md).
+This project is licensed under the [MIT License]().
 
